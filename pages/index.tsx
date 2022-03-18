@@ -19,7 +19,7 @@ const Home: React.FC<Props> = ({ posts }: Props) => {
         <title>{SITE_NAME}</title>
       </Head>
 
-      <h1 className="text-4xl font-bold mb-4">Recipes</h1>
+      <h1 className="text-4xl font-bold mb-4">Posts</h1>
 
       <div className="space-y-12">
         {posts.map((post) => (

@@ -1,3 +1,3 @@
-export const SITE_URL = "http://localhost:3000";
-export const SITE_NAME = "Nathan's Coding Blog";
+export const SITE_URL = "https://nathan-blog.vercel.app";
+export const SITE_NAME = "Nathan's IT Blog";
 export const TWITTER_USERNAME = "@nathanmakeit";

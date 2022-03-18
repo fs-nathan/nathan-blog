@@ -8,7 +8,7 @@ type Props = {
 };
 
 const meta = {
-    description: `${SITE_NAME} is about my personal writings\/notes on various IT topics.`,
+    description: `${SITE_NAME} includes articles on various IT topics.`,
     ogImagePath: '/assets/card-image.webp',
 };
 
@@ -16,7 +16,7 @@ const Meta: React.FC<Props> = ({ pageTitle }: Props) => {
     const router = useRouter();
     const ogUrl = SITE_URL + router.asPath;
     const ogType = router.pathname === '/' ? 'website' : 'article';
-    const ogTitle = pageTitle ? pageTitle : 'Nathan\'s coding blogs';
+    const ogTitle = pageTitle ? pageTitle : 'Nathan\'s IT blogs';
     const ogImage = SITE_URL + meta.ogImagePath;
 
     return (
