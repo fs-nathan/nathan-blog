@@ -4,8 +4,5 @@ export interface IPost {
   thumbnail: string;
   title: string;
   description: string;
-  yields: string;
-  ingredients: string[];
-  directions: string[];
-  tips: string[];
+  keywords: string;
 }

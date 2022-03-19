@@ -60,6 +60,7 @@ const Meta: React.FC<Props> = ({ pageTitle }: Props) => {
                 content={meta.description}
                 key="ogDescription"
             />
+            <meta name="author" content="Nathan Nguyen" />
             <meta property="og:image" content={ogImage} key="ogImage" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={TWITTER_USERNAME} />

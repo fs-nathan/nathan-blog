@@ -5,6 +5,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import _ from 'lodash';
 
+import Image from 'next/image';
 import Directions from '../../components/Directions';
 import Ingredients from '../../components/Ingredients';
 import Layout from '../../components/Layout';
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const components = {
+    Image,
     Ingredients,
     Directions,
     Tips: dynamic(() => import('../../components/Tips')),
@@ -41,6 +43,7 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
                     key="ogDescription"
                 />
                 <meta property="og:image" content={ogImage} key="ogImage" />
+                <meta name="keywords" content={frontMatter.keywords} />
             </Head>
 
             <article className="prose prose-green">
