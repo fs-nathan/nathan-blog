@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import _ from 'lodash';
 
 import Directions from '../../components/Directions';
 import Ingredients from '../../components/Ingredients';
@@ -43,13 +44,11 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
             </Head>
 
             <article className="prose prose-green">
-                <div className="mb-4">
+                {!_.isEmpty(frontMatter.thumbnail) && <div className="mb-4">
                     <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />
-                </div>
+                </div>}
 
                 <h1>{frontMatter.title}</h1>
-
-                <p className="font-bold">yield: {frontMatter.yields}</p>
 
                 <p>{frontMatter.description}</p>
 

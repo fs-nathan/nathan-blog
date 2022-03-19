@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import _ from 'lodash';
 import Layout from '../components/Layout';
 import Thumbnail from '../components/Thumbnail';
 import { IPost } from '../types/post';
@@ -24,13 +24,14 @@ const Home: React.FC<Props> = ({ posts }: Props) => {
       <div className="space-y-12">
         {posts.map((post) => (
           <div key={post.slug}>
-            <div className="mb-4">
+            {!_.isEmpty(post.thumbnail) && <div className="mb-4">
               <Thumbnail
                 slug={post.slug}
                 title={post.title}
                 src={post.thumbnail}
               />
-            </div>
+            </div>}
+
 
             <h2 className="text-2xl font-bold mb-4">
               <Link href={`/posts/${post.slug}`}>
